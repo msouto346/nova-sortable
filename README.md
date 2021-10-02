@@ -1,17 +1,3 @@
-# Nova Sortable
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/optimistdigital/nova-sortable.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-sortable)
-[![Total Downloads](https://img.shields.io/packagist/dt/optimistdigital/nova-sortable.svg?style=flat-square)](https://packagist.org/packages/optimistdigital/nova-sortable)
-
-This [Laravel Nova](https://nova.laravel.com) package allows you to reorder models in a Nova resource's index view using drag & drop.
-
-Uses Spatie's [eloquent-sortable](https://github.com/spatie/eloquent-sortable) under the hood.
-
-## Requirements
-
-- `php: >=7.3`
-- `laravel/nova: ^3.0`
-
 ## Features
 
 - Drag & drop reorder (on either Index view or HasMany view)
@@ -30,7 +16,7 @@ Install the package in a Laravel Nova project via Composer:
 
 ```bash
 # Install package
-composer require optimistdigital/nova-sortable
+composer require msouto/nova-sortable
 ```
 
 ## Usage
@@ -77,7 +63,7 @@ When the model does not have a sortable configuration, the default eloquent-sort
 Apply `HasSortableRows` trait from this package on the Resource:
 
 ```php
-use OptimistDigital\NovaSortable\Traits\HasSortableRows;
+use Msouto\NovaSortable\Traits\HasSortableRows;
 
 class MyResource extends Resource
 {
