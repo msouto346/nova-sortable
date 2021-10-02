@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\NovaSortable;
+namespace Msouto\NovaSortable;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

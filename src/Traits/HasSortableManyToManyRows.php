@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimistDigital\NovaSortable\Traits;
+namespace Msouto\NovaSortable\Traits;
 
 trait HasSortableManyToManyRows
 {

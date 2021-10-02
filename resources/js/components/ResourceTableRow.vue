@@ -56,7 +56,7 @@
           <router-link
             :data-testid="`${testId}-view-button`"
             :dusk="`${resource['id'].value}-view-button`"
-            class="cursor-pointer text-70 hover:text-primary mr-3 inline-flex items-center"
+            class="cursor-pointer hover:text-iqos-turquoise-50 text-iqos-turquoise mr-3 inline-flex items-center"
             v-tooltip.click="__('View')"
             :to="{
               name: 'detail',
@@ -66,7 +66,7 @@
               },
             }"
           >
-            <icon type="view" width="22" height="18" view-box="0 0 22 16" />
+            <icon type="view" width="22" height="22" view-box="0 0 22 16" style="fill: none !important;" />
           </router-link>
         </span>
 
@@ -74,7 +74,7 @@
           <!-- Edit Pivot Button -->
           <router-link
             v-if="relationshipType == 'belongsToMany' || relationshipType == 'morphToMany'"
-            class="inline-flex cursor-pointer text-70 hover:text-primary mr-3"
+            class="inline-flex cursor-pointer hover:text-iqos-turquoise-50 text-iqos-turquoise mr-3"
             :dusk="`${resource['id'].value}-edit-attached-button`"
             v-tooltip.click="__('Edit Attached')"
             :to="{
@@ -97,7 +97,7 @@
           <!-- Edit Resource Link -->
           <router-link
             v-else
-            class="inline-flex cursor-pointer text-70 hover:text-primary mr-3"
+            class="inline-flex cursor-pointer hover:text-iqos-turquoise-50 text-iqos-turquoise mr-3"
             :dusk="`${resource['id'].value}-edit-button`"
             :to="{
               name: 'edit',
@@ -121,7 +121,7 @@
         <button
           :data-testid="`${testId}-delete-button`"
           :dusk="`${resource['id'].value}-delete-button`"
-          class="inline-flex appearance-none cursor-pointer text-70 hover:text-primary mr-3"
+          class="inline-flex appearance-none cursor-pointer hover:text-iqos-turquoise-50 text-iqos-turquoise mr-3"
           v-tooltip.click="__(viaManyToMany ? 'Detach' : 'Delete')"
           v-if="resource.authorizedToDelete && (!resource.softDeleted || viaManyToMany)"
           @click.prevent="openDeleteModal"
@@ -132,7 +132,7 @@
         <!-- Restore Resource Link -->
         <button
           :dusk="`${resource['id'].value}-restore-button`"
-          class="appearance-none cursor-pointer text-70 hover:text-primary mr-3"
+          class="appearance-none cursor-pointer hover:text-iqos-turquoise-50 text-iqos-turquoise mr-3"
           v-if="resource.authorizedToRestore && resource.softDeleted && !viaManyToMany"
           v-tooltip.click="__('Restore')"
           @click.prevent="openRestoreModal"
